@@ -65,6 +65,13 @@ distribution.
 #endif
 
 #ifdef _WIN32
+
+#ifdef LIBTINYXML2_EXPORTS_IMPL
+#define TINYXML2_EXPORT
+#else
+#define TINYXML2_IMPORT
+#endif
+
 #   ifdef TINYXML2_EXPORT
 #       define TINYXML2_LIB __declspec(dllexport)
 #   elif defined(TINYXML2_IMPORT)
